@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карта мира — Движуха</title>
+  <meta name="description" content="Карта мира сервера Движуха: 18 тысяч на 12 тысяч блоков, один пиксель — один блок.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#1b1c1f">
+  <link rel="icon" href="/img/favicon.png">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="map.css?v=1">
+</head>
+<body>
+  <header class="bar">
+    <a class="back" href="/">← Движуха</a>
+    <h1>Карта мира</h1>
+    <span class="coords mono" id="coords">наведи на карту</span>
+  </header>
+  <div id="map" aria-label="Карта мира сервера"></div>
+  <p class="hint">Колесо или пальцы — приблизить. Один пиксель на самом крупном масштабе — один блок. Карта снята при создании мира, построек игроков на ней нет.</p>
+  <script src="vendor/leaflet.js"></script>
+  <script src="map.js?v=1"></script>
+</body>
+</html>

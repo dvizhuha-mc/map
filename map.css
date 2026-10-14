@@ -1,0 +1,31 @@
+@font-face { font-family: 'Alumni Sans'; src: url('/fonts/AlumniSans.woff2') format('woff2'); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: 'PT Sans'; src: url('/fonts/PTSans-Regular.woff2') format('woff2'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'PT Mono'; src: url('/fonts/PTMono.woff2') format('woff2'); font-display: swap; }
+
+:root { --ink: #1b1c1f; --ink-3: #33353a; --paper: #ebe2cd; --brass: #d8772c; --mute: #8b8a86; color-scheme: dark; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body { display: flex; flex-direction: column; background: var(--ink); color: var(--paper); font: 15px/1.4 'PT Sans', sans-serif; }
+.mono { font-family: 'PT Mono', monospace; }
+
+.bar { display: flex; align-items: baseline; gap: 22px; padding: 12px 18px; border-bottom: 1px solid var(--ink-3); }
+.back { color: var(--brass); text-decoration: none; }
+.back:hover { text-decoration: underline; text-underline-offset: 3px; }
+.bar h1 { font-family: 'Alumni Sans', sans-serif; font-weight: 800; font-size: 30px; line-height: 1; }
+.coords { margin-left: auto; color: var(--mute); font-size: 14px; white-space: nowrap; }
+
+#map { flex: 1; background: #10141a; }
+.leaflet-container { font: inherit; background: #10141a; }
+.leaflet-tile { image-rendering: pixelated; }
+.leaflet-bar a { background: var(--ink); color: var(--paper); border-color: var(--ink-3); }
+.leaflet-bar a:hover { background: #26272b; color: var(--brass); }
+.leaflet-control-attribution { background: rgba(27, 28, 31, .8) !important; color: var(--mute) !important; }
+.leaflet-control-attribution a { color: var(--mute) !important; }
+
+.hint { padding: 8px 18px 10px; color: var(--mute); font-size: 13px; border-top: 1px solid var(--ink-3); }
+
+@media (max-width: 640px) {
+  .bar { flex-wrap: wrap; gap: 4px 16px; padding: 10px 16px; }
+  .coords { margin-left: 0; width: 100%; }
+  .hint { padding: 8px 16px; }
+}
